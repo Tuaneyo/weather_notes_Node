@@ -1,0 +1,528 @@
+@import "wheather.css";
+/*  base btn-bg-home-dark- */
+body{
+    width: 100%;
+    position: relative;
+    font-family: 'Gudea', sans-serif !important;
+}
+html, header {
+    height: 100%;
+}
+
+input:focus ,textarea:focus, select:focus {
+    border-color: #25cca5 !important;
+    box-shadow: 0 0 0 0.2rem rgba(37,204,165,.25) !important;
+}
+
+.home-color{
+    color: #25cca5;
+}
+
+.home-bg-color{
+    background: #25cca5;
+}
+
+/*  HOME CSS */
+
+.form-header{
+    color: grey;
+    font-size: 30px;
+    font-weight: lighter;
+    border-bottom: 1px solid #cdcdcd;
+}
+
+.file-wrap:hover .input-file-trigger{
+    background: #25cca5 !important;
+    color:white;
+    transition: all .7s;
+}
+
+.border-bottom-btn{
+    border: none;
+    border-bottom: 2px solid #dde1e6;
+}
+
+#my-file{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    padding: 14px 0;
+    cursor: pointer;
+}
+
+.home-btn-outline{
+    width: 100px;
+}
+
+.logo{
+    padding: .2em 1.5em;
+}
+
+#navbar-ham{
+    padding: 1em 1.5em;
+    transition: all .7s;
+    -webkit-transition: all .7s;
+}
+
+.navbar-response{
+    padding-top:.5em !important;
+    padding-bottom:.5em !important;
+
+}
+
+.info-img-wrap img{
+    object-fit: cover;
+}
+
+.nav-icons{
+    font-size: 28px;
+    color: grey;
+}
+
+.info-body h2{
+    font-weight: 600;
+    line-height: 2.5rem;
+}
+
+.info-body h2 span{
+    font-size: 60px;
+    text-shadow: -3px 4px 0px #25cca5;
+    font-weight: 900;
+}
+
+.home-btn{
+    padding: .7em 2.5em;
+    background: #50d4b5;
+    color: white;
+    text-transform: uppercase;
+}
+
+.home-btn::before{
+    content: '';
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    width: 0;
+    height: 4px;
+    will-change: width, margin-right;
+    transition: width 0.8s cubic-bezier(0.19,1,0.22,1), margin-right 0.8s cubic-bezier(0.19,1,0.22,1);
+    color: white;
+    background: white;
+}
+
+.home-btn:hover::before, .info-wrap:hover .home-btn::before{
+    width: 50px;
+    margin-right: 10px;
+}
+
+.home-btn:hover{
+    color: white;
+}
+
+.info-notes-wrap{
+    padding: 2em;
+    background: #f8f8f8;
+    margin-top: 80px;
+    position: relative;
+    top: 40px;
+    left: 40px;
+}
+
+.mask{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-attachment: fixed;
+}
+
+.view{
+    position: relative;
+    cursor: default;
+}
+
+.bs-switch{
+    width: 60px !important;
+    height: 20px !important;
+}
+
+.bs-switch .slider:before{
+    height: 30px !important;
+    width: 30px !important;
+    left: 5px !important;
+    bottom: -6px !important;
+    background-color: #25cca5 !important;
+    display: flex;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    content: ' i ' !important;
+    font-weight: 900 !important;
+    margin:0;
+    font-size: 15px;
+}
+
+.bs-switch input:checked+.slider{
+    background-color: #25cca57a !important;
+}
+
+/*  HOME CSS */
+
+
+
+.navbar-nav{
+    flex-direction: row !important;
+}
+
+.o-nav-item{
+    flex: 1 1 50%;
+    text-transform: uppercase;
+    font-size: 15px;
+}
+
+.o-nav-item, .border-light-f1{
+    border:1px solid #f1f1f1;
+}
+
+.o-nav-item a{
+    color: #021212 !important;
+}
+
+.o-nav-item:hover, .house-dark-hover:hover {
+    background: #021212;
+    transition: all .7s;
+    cursor:pointer;
+}
+
+.o-nav-item:hover span i, .o-nav-item:hover span, .house-dark-hover:hover i{
+    color: #25cca5;
+}
+
+.no-br{
+    border-radius: 0 !important;
+}
+
+.p-nav{
+    padding:1em;
+}
+
+.nav-fa-bars{
+    color: #25cca5;
+    font-size: 30px !important;
+}
+
+.notes-card{
+    border: 1px solid #cdcdcd !important;
+}
+
+.notes-card:hover{
+    cursor: pointer;
+}
+
+.notes-card .card-text{
+    height: 70px;
+    max-height: 70px;
+    overflow: hidden;
+}
+
+.badge-bg{
+    background: #25cca5 !important;
+}
+
+.badge-bg a{
+    color: #021212;
+}
+
+.badge-bg:hover{
+    background: #021212 !important;
+    transition: all .7s;
+}
+
+.badge-bg:hover a{
+    color:#25cca5 !important;
+    transition: all .7s;
+}
+
+.bg-default{
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bg-default h2{
+    color:white;
+}
+
+.po-row{
+    position: relative;
+    top:-50px;
+}
+
+.cal-head{
+    padding: .1em 1em;
+    background: #d86d42;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.cal-body{
+    padding: .3em 1em;
+    display: flex;
+    justify-content: center;
+    font-size: 2em;
+    background: #ededed;
+    font-weight: 900;
+}
+
+.p-15{
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.add-btn-wrap{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+}
+
+.round-btn a{
+    width: 50px;
+    height: 50px;
+}
+
+.round-btn a, .round-btn-small a{
+    border-radius: 100%;
+}
+
+.round-btn-small a{
+    width: 25px;
+    height: 25px;
+}
+
+.add-btn{
+    width: 100%;
+    padding: .5em;
+    background: #25cca5;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    border:1px solid #25cca5 !important;
+}
+
+.add-btn:hover{
+    background: #24a285;
+    border:1px solid #24a285;
+    transition: all .7s;
+    -webkit-transition: all .7s;
+}
+
+.border-btn{
+    background: white;
+    border: 1px solid #25cca5;
+    color:#25cca5;
+}
+
+.border-btn-black{
+    border-color: #0212125e;
+    color: #021212;
+}
+
+.del-btn{
+    color:grey !important;
+}
+
+.del-btn:hover{
+    background: #CCCCCC;
+}
+
+.box-shadow{
+    -webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+}
+
+.box-shadow-light{
+    box-shadow: 1px 1px 2px 0px rgba(216,216,216,1);
+    -webkit-box-shadow: 1px 1px 2px 0px rgba(216,216,216,1);
+}
+
+.btn-bg-home{
+    background: #25cca5;
+}
+
+.btn-bg-home-dark{
+    background: #021212;
+}
+
+.btn-bg-home-dark-light{
+    background: #021212d4;
+}
+
+.btn-bg-home i{
+    color: white;
+}
+
+.message-wrap{
+    position: fixed;
+    top: 100px;
+    right: -100%;
+    background: #ffffff;
+    z-index: 1000;
+}
+
+.message-wrap .success{
+    background: #ffffff;
+    color: #0ec237;
+    border: 2px solid #0ec237;
+
+}
+
+
+.message-wrap .danger{
+    color: #ff3547;
+    border: 2px solid #ff3547;
+}
+
+
+.message-wrap ul{
+    list-style: none;
+    margin: 0;
+    font-weight: 600;
+    padding: 1em;
+}
+
+.crud-btn{
+    border-radius:100%;
+    width:25px;
+    height:25px;
+}
+
+.fixed-modal{
+    position: fixed !important;
+    right: -100%;
+    height: 100%;
+    margin: 0 !important;
+}
+
+.m-header{
+    box-shadow: unset !important;
+    border-bottom: 4px solid #25cca5 !important;
+    background: #021212;
+    padding: 0;
+}
+
+.m-header p{
+    color: white;
+}
+
+.nav-close{
+    margin: 0 !important;
+    background: white !important;
+    margin-bottom: -6px !important;
+}
+
+.nav-close span{
+    margin-bottom: -4px !important;
+    color: #021212 !important;
+}
+
+.nav-close:hover{
+    opacity: 1 !important;
+}
+
+.nav-close:hover span{
+    color: #25cca5 !important;
+}
+
+.modal-dialog {
+    max-width: 400px !important;
+}
+
+.hallo{
+    display: none;
+}
+
+.width-responsive-50{
+    width:20%;
+}
+
+.wheather-top-response{
+    left: -200px;
+    top: 110px;
+}
+
+.text-grey{
+    color: grey !important;
+}
+
+.toggle-text{
+    max-height: 65px;
+}
+
+.toggle-text:hover{
+    color: #25cca5 !important;
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    .info-notes-wrap{
+        top: 0;
+        left: 0;
+    }
+
+    .hallo{
+        display: block;
+    }
+
+    .wheather-top-response{
+        left: 0;
+        top: 50px;
+    }
+
+    .info-graph h2{
+        font-size: 25px;
+    }
+
+    .days-wrap > div{
+        border: 1px solid white;
+    }
+
+
+}
+
+/* iPads (landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+
+    .info-notes-wrap{
+        top: 20px;
+        left: 40px;
+    }
+
+    .wheather-top-response{
+        left: 0;
+        top: 50px;
+    }
+
+}
+
+
+/* iPads (portrait) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+    .info-notes-wrap{
+        top: 0;
+        left: 0;
+    }
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+
+}

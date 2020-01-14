@@ -1,0 +1,11 @@
+extends layouts/default
+
+block content
+  .container-fluid
+    br
+    br
+    br
+    br
+    h1= message
+    h2= error.status
+    pre #{error.stack}

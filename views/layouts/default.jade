@@ -1,0 +1,27 @@
+doctype html
+html(lang='en')
+  include  head
+  title= title
+  body.h-100
+    include nav
+
+    .message-wrap.box-shadow
+      .d-flex.flex-row.justify-content-center.align-items-center
+        != messages()
+
+    block content
+
+    //(style='bottom: 0;')
+    //.modal-footer.justify-content-center.btn-bg-home-dark.p-2.position-absolute.w-100
+    //  p.m-0.text-white.test
+    //    small
+    //      | &copy; Copyright 2018: Tuan Nguyen
+
+
+  // Include all compiled plugins (below), or include individual files as needed
+  script(src='/~s1131670/P2_NodeJS_Opdracht/70/public/javascripts/jquery-3.3.1.min.js')
+  script(src='/~s1131670/P2_NodeJS_Opdracht/70/public/javascripts/popper.min.js')
+  script(src='/~s1131670/P2_NodeJS_Opdracht/70/public/javascripts/bootstrap.min.js')
+  script(src='/~s1131670/P2_NodeJS_Opdracht/70/public/javascripts/mdb.min.js')
+  script(src='/~s1131670/P2_NodeJS_Opdracht/70/public/javascripts/form-validate.js')
+

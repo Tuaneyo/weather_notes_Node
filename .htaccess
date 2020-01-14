@@ -1,0 +1,4 @@
+PassengerBaseURI /
+PassengerAppRoot /
+PassengerAppType node
+PassegerStartUpFile app.js

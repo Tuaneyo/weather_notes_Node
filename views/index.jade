@@ -1,0 +1,82 @@
+extends layouts/default
+
+block content
+  .container-fluid.p-0
+    div.w-100.bg-default(style="background: url('public/images/mountains.svg');background-position: center bottom;background-repeat: no-repeat;background-size: cover;")
+      div.hallo
+        h2.d-flex.justify-content-center.align-content-center.mt-5
+          | Hallo
+  .container
+    .row
+      .col-md-4.p-2
+        .view.info-img-wrap.box-shadow-light
+          img.img-fluid(src='public/images/android-wallpaper.png', width='100%', style='height: 400px;')
+          .mask.flex-center.waves-effect.waves-light.rgba-slight
+        //.view.info-img-wrap.box-shadow-light
+        //  img.waves-effect.mask.flex-center.waves-effect.waves-light.rgba-teal-strong(src='images/android-wallpaper.png', width='100%', height='400px')
+      .col-md-8.p-5.mt-sm-2
+        .d-flex.flex-column.info-wrap
+          .info-header
+              small
+                b
+                  |Made by nodeTNGUYEN
+          .info-body.mt-4
+            .info-graph
+              h2
+                span
+                  | W
+                | elkcom, you can find all my webdevelopment projects on this website. Explore what nodeTN has to offer.
+          .info-footer.mt-5
+            .info-btn-wrap
+              a.home-btn.box-shadow-light(href='#')
+                span
+                  | Read more
+    // Second section
+    .row.mt-5.mt-sm-0
+      .col-md-8.mt-lg-5.mt-md-5.mt-sm-0
+          .d-flex.flex-column.info-notes-wrap.box-shadow-light.info-wrap
+            .info-header
+              small
+                b
+                  | Finished, 21 November 2018
+            .info-body.mt-4
+              .info-graph
+                h2
+                  span
+                    | T
+                  | he first project is a simple, but gorgeous and attractive looking notes application. See it for yourself.
+            .info-footer.mt-5.pt-2
+              .info-btn-wrap
+                a.home-btn.box-shadow-light(href='notes')
+                  span
+                    | EXPLORE
+      .col-md-4.mt-md-0.pt-3.pr-0.pl-0
+        .view.info-img-wrap.d-flex.justify-content-center
+          img(src='public/images/iphone.png', style='object-fit: contain;')
+  // Other section
+  .container-fluid.p-0.mt-5.mb-0(style='background: #50d4b529;')
+    .container
+      .row.p-lg-5.p-md-4.p-3
+        .col-md-7
+          .d-flex.position-relative
+              .view.info-img-wrap
+                img.img-fluid.m-0(src='public/images/ipad-wheather.png', alt='placeholder', style='height: 100%;width: 100%;')
+        .col-md-5.position-relative
+          .d-flex.p-4.bg-white.position-absolute.wheather-top-response.box-shadow-light.mb-5
+            .d-flex.flex-column.info-wrap
+              .info-header
+                small
+                  b
+                    | Finished, 25 November 2018
+              .info-body.mt-4
+                .info-graph
+                  h2
+                    span
+                      | T
+                    | he second project is a romantic weather application that will blow you away with its elegant design.
+              .info-footer.mt-5
+                .info-btn-wrap
+                  a.home-btn.box-shadow-light(href='wheather/Almere/nl')
+                    span
+                      | See it myself
+  // More coming

@@ -1,0 +1,102 @@
+
+// Navbar
+.container-fluid.p-0
+  nav.navbar.navbar-light.lighten-4.p-0(style='position:fixed;width:100%;background:white;z-index:1000;')
+    a.logo
+     img(src='../70/public/images/logo-small2.png', width='150px')
+    // Collapse button
+    //button.navbar-toggler.toggler-example.p-nav(type='button', style='padding: 1em 1.5em;', data-toggle='collapse', data-target='#navbarSupportedContent1', aria-controls='navbarSupportedContent1', aria-expanded='false', aria-label='Toggle navigation')
+    button#navbar-ham.navbar-toggler.toggler-example.p-nav(type='button', data-target="#centerModalSuccess", data-toggle="modal")
+      span.dark-blue-text
+        i.fa.fa-bars.fa-1x.nav-fa-bars
+  // modal
+  #centerModalSuccess.modal.animated.fadeInRight.fast(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
+    .modal-dialog.modal-notify.fixed-modal(role='document')
+      // Content
+      .modal-content.h-100
+        // Header
+        .modal-header.m-header.d-flex.justify-content-between.p-0
+          img(src='../70/public/images/tn.png', width='75px')
+          button.close.nav-close(type='button', data-dismiss='modal', aria-label='Close')
+            span.white-text(aria-hidden='true') ×
+        // Body
+        .modal-body.p-0.position-relative
+          // Links
+          ul.navbar-nav.mr-auto.flex-md-row.justify-content-around.o-nav.flex-wrap
+            li.nav-item.o-nav-item.w-100(class=(title == 'Express' ? 'active' : ''), style='border-bottom: 4px solid lightblue;')
+              a.nav-link.h-100.p-4.d-flex.flex-column.justify-content-center.align-items-center.waves-effect.waves-light(href='/~s1131670/P2_NodeJS_Opdracht/70/')
+                span.p-2
+                  i.fas.fa-home.nav-icons
+                span.p-2
+                  | home
+            li.nav-item.o-nav-item.w-100(class=(title == 'notes' ? 'active' : ''), style='border-bottom: 4px solid #24c8a254;')
+              a.nav-link.h-100.p-4.d-flex.flex-column.justify-content-center.align-items-center.waves-effect.waves-light(href='/~s1131670/P2_NodeJS_Opdracht/70/notes')
+                span.p-2
+                  i.fas.fa-sticky-note.nav-icons
+                span.p-2
+                  | notes
+            li.nav-item.o-nav-item.w-100(class=(title == 'wheather' ? 'active' : ''), style='border-bottom: 4px solid #f5deb3aa;')
+              a.nav-link.h-100.p-4.d-flex.flex-column.justify-content-center.align-items-center.waves-effect.waves-light(href='/~s1131670/P2_NodeJS_Opdracht/70/wheather/Almere/nl')
+                span.p-2
+                  i.fas.fa-sun.nav-icons
+                span.p-2
+                  | wheather app
+            li.nav-item.o-nav-item.w-100(class=(title == 'todo' ? 'active' : ''), style='border-bottom: 4px solid #ffb6c19c;')
+              a.nav-link.h-100.p-4.d-flex.flex-column.justify-content-center.align-items-center.waves-effect.waves-light(href='/~s1131670/P2_NodeJS_Opdracht/70/todo')
+                span.p-2
+                  i.fas.fa-th-list.nav-icons
+                span.p-2
+                  | todo
+            li.nav-item.o-nav-item.w-100(class=(title == 'login' ? 'active' : ''), style='border-bottom: 4px solid #90ee9087;')
+              a.nav-link.h-100.p-4.d-flex.flex-column.justify-content-center.align-items-center.waves-effect.waves-light(href='/~s1131670/P2_NodeJS_Opdracht/70/users/login')
+                span.p-2
+                  i.fas.fa-sign-in-alt.nav-icons
+                span.p-2
+                  | login
+            li.nav-item.o-nav-item.w-100(class=(title == 'register' ? 'active' : ''), style='border-bottom: 4px solid #0eacb366;')
+              a.nav-link.h-100.p-4.d-flex.flex-column.justify-content-center.align-items-center.waves-effect.waves-light(href='/~s1131670/P2_NodeJS_Opdracht/70/users/register')
+                span.p-2
+                  i.fas.fa-book-reader.nav-icons
+                span.p-2
+                  | register
+
+          //.position-absolute.w-100(style='bottom:0;')
+          //  .d-flex.w-100.justify-content-between.align-items-center.h-100.mt-4.p-3.flex-row
+          //    //img.rounded-circle.img-fluid(src='https://mdbootstrap.com/img/Photos/Avatars/img%20(30).jpg', width='100px', height='100px')
+          //    .text-left.text-dark.p-2
+          //      b
+          //        | Hello, <b> Radoeyo </b>
+          //    .d-flex.mt-2
+          //      label.bs-switch.toggle-nav
+          //        input#toggle-input(type='checkbox', checked)
+          //        span.slider.round
+          //
+          //  .d-flex.justify-content-between
+          //    a.text-grey.d-flex.justify-content-center.align-items-center.w-25.p-4.border-light-f1.house-dark-hover.toggle-text(href='/forum')
+          //        i.fas.fa-comments
+          //        //small
+          //        //  | FORUM
+          //    a.text-grey.d-flex.justify-content-center.align-items-center.w-25.p-4.border-light-f1.house-dark-hover.toggle-text(href='/info')
+          //        i.fas.fa-info
+          //        //small
+          //        //  | INFO
+          //    a.text-grey.d-flex.justify-content-center.align-items-center.w-25.p-4.border-light-f1.house-dark-hover.toggle-text(href='/users/account')
+          //        i.fas.fa-cog
+          //        //small
+          //        //  | ACCOUNT
+          //    a.text-grey.d-flex.justify-content-center.align-items-center.w-25.p-4.border-light-f1.house-dark-hover.toggle-text(href='/logout')
+          //        i.fas.fa-power-off
+          //        //small
+          //        //  | LOGOUT
+
+        // Footer
+        .modal-footer.justify-content-center.btn-bg-home-dark.p-2
+          p.m-0.text-white.test
+            small
+              | &copy; Copyright 2018: Tuan Nguyen
+
+
+
+
+
+

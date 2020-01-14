@@ -1,0 +1,50 @@
+extends ../layouts/auth
+
+block content
+  .view.bg.h-100(style="background-image: url('https://images.unsplash.com/photo-1518655048521-f130df041f66?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=95618c0e060665fcf0c9e489d8b22982&w=1000&q=80'); background-repeat: no-repeat; background-size: cover; background-position: center center;")
+    .mask.d-flex.justify-content-center.align-items-center
+      .container
+        .d-flex.justify-content-center
+          .p-3
+            img(src='../70/public/images/logo-small2.png', width='150px')
+        .row
+          .col-lg-3.col-md-3.col-sm-12
+          .col-md-6.col-sm-12.mb-4.white-text.text-center.p-4
+            .form-wrap.bg-white.box-shadow
+              .form-header.pt-3.pb-2.pl-3.pr-4
+                span
+                  | Good to see you again
+              .form-body.p-4.pt-5
+                form.needs-validation(novalidate='', method='post', action='/users/login')
+                  .form-row
+                    .col-md-12.mb-3
+                      .input-group.mb-3
+                        .input-group-prepend
+                          a.btn.btn-md.btn-outline-mdb-color.m-0.px-3.py-2.z-depth-0.waves-effect.home-btn-outline(style='border-color: #25cca5 !important;')
+                            b
+                              | email
+                        input.form-control.no-br(type='text', required='', name='email')
+                        .invalid-feedback
+                          | email must be filled in
+                    .col-md-12.mb-3
+                      .input-group.mb-3
+                        .input-group-prepend
+                          a.btn.btn-md.btn-outline-mdb-color.m-0.px-3.py-2.z-depth-0.waves-effect.home-btn-outline(style='border-color: #25cca5 !important;')
+                            b
+                              | password
+                        input.form-control.no-br(type='password', required='', name='password')
+                        .invalid-feedback
+                          | password must be filled in
+                      .text-center.text-primary
+                        a(href='/')
+                          | password forget
+                  .d-flex
+                    a.w-25.mr-1.border-btn.border-btn-black.box-shadow-light.d-flex.justify-content-center.align-items-center(href='/~s1131670/P2_NodeJS_Opdracht/70/')
+                      i.fas.fa-arrow-left
+                    .w-75.ml-1.bg-light.box-shadow-light
+                      button.add-btn.text-uppercase(type='submit',style='font-size: 16px;')
+                        |   Login
+
+
+          .col-lg-3.col-md-3.col-sm-12
+

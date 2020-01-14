@@ -1,0 +1,82 @@
+extends ../layouts/default
+
+block content
+  .container-fluid.p-0
+    div.w-100.bg-default(style="background: url('public/images/abstract.svg');background-position: center bottom;background-repeat: no-repeat;background-size: cover;")
+      div.container
+        .row
+          .col-lg-2.col-md-2.col-sm-12
+          .col-lg-8.col-md-8.col-sm-12
+            div.d-flex.justify-content-between.mt-5
+              div.d-flex.justify-content-start.align-content-center.w-100
+                h2.d-flex.align-items-center
+                  | edit note
+              div.d-flex.justify-content-end.w-100
+                div.calendar.d-flex.flex-column.box-shadow
+                  div.cal-head.text-uppercase
+                    | #{date.substr(3, 4)}
+                  div.cal-body
+                    | #{date.substr(0,2)}
+          .col-lg-2.col-md-2.col-sm-12
+  .container.mb-4
+    .row.po-row
+      .col-lg-2.col-md-2.col-sm-12
+      .col-lg-8.col-md-8.col-sm-12
+          .card.no-br.notes-card.w-100.mt-3.mb-3
+            // Card content
+            .card-body.pb-3.pt-3
+              // Title
+              form.needs-validation(novalidate='', method='post',  action='/~s1131670/P2_NodeJS_Opdracht/70/notes/details/update/#{data.id}')
+                .form-row
+                  .col-md-12.mb-3
+                    .input-group.mb-3
+                      .input-group-prepend
+                        a.btn.btn-md.btn-outline-mdb-color.m-0.px-3.py-2.z-depth-0.waves-effect(style='border-color: #25cca5 !important;')
+                          b
+                            | Title
+                      input.form-control.no-br(type='text', required='', name='title', value='#{data.title}')
+                      .invalid-feedback
+                        | title must be filled in
+                  .col-md-12.mb-3
+                    textarea.form-control.no-br(rows='4', cols='50', required='', name='description')
+                      | #{data.description}
+                    .invalid-feedback
+                      | description must be filled in
+                .text-right.mb-3
+                  small.text-black-50
+                  small
+                    | Last modified #{data.date} at #{data.time}
+                .d-flex
+                  .w-25.mr-1.bg-light.d-flex.justify-content-center.align-items-center.box-shadow-light
+                    a.del-btn.w-100.h-100.d-flex.justify-content-center.align-items-center(data-target="#modalDelete", data-toggle="modal")
+                      i.far.fa-trash-alt
+                  .w-75.ml-1.bg-light.box-shadow-light
+                    button.add-btn(type='submit')
+                     i.fas.fa-save
+                     |   &nbsp;save
+          .d-flex.round-btn.justify-content-end.mt-4
+            a.btn.btn-bg-home.d-flex.justify-content-center.align-items-center.p-0(href='/~s1131670/P2_NodeJS_Opdracht/70/notes')
+              i.fas.fa-arrow-left
+      .col-lg-2.col-md-2.col-sm-12
+
+  // Central Modal Medium Info
+  #modalDelete.modal.fade(tabindex='-1', role='dialog', aria-labelledby='ModalLabel', aria-hidden='true')
+    .modal-dialog.modal-notify.modal-danger(role='document', style='position: relative;top: 50px;')
+      // Content
+      .modal-content
+        // Header
+        .modal-header
+          p.heading.lead.text-center Are you sure you want to delete this note?
+          button.close(type='button', data-dismiss='modal', aria-label='Close')
+            span.white-text(aria-hidden='true') ×
+        .modal-body
+          .text-center
+            i.fas.fa-exclamation.fa-4x.animated.bounce(style='color:red;')
+        .modal-footer.justify-content-center
+          form(method='post', action='/~s1131670/P2_NodeJS_Opdracht/70/notes/delete/#{data.id}')
+            button.btn.btn-danger(type='submit')
+              i.far.fa-trash-alt
+              | &nbsp; delete
+      // /.Content
+       // Central Modal Medium Info
+

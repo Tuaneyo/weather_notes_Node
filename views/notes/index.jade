@@ -1,0 +1,62 @@
+extends ../layouts/default
+
+block content
+  .container-fluid.p-0
+    div.w-100.bg-default(style="background: url('public/images/mountains.svg');background-position: center bottom;background-repeat: no-repeat;background-size: cover;")
+      div.mt-5
+        h2.d-flex.justify-content-center.align-content-center
+          | your notes
+  .container
+    .row.po-row
+      .col-lg-2.col-md-2.col-sm-12
+      .col-lg-8.col-md-8.col-sm-12
+        each note in data
+          a(href='/notes/details?id=#{note.id}')
+          .card.no-br.notes-card.w-100.mt-3.mb-3
+            // Card content
+            .card-body.pb-3.pt-3
+              // Title
+              div.d-flex.justify-content-between
+                h4.card-title
+                  a
+                    | #{note.title}
+                .d-flex.flex-row
+                  a(href='/~s1131670/P2_NodeJS_Opdracht/70/notes/details/#{note.id}', style='color:white;cursor: pointer;')
+                    span.badge.badge-bg.badge-pill.mr-1.crud-btn.d-flex.justify-content-center.align-items-center
+                      i.fas.fa-pen
+                  a.delete-a(href='/~s1131670/P2_NodeJS_Opdracht/70/notes/delete/#{note.id}',style='color:white;cursor: pointer;', data-target="#modalDelete", data-toggle="modal")
+                    span.badge.badge-danger.badge-pill.ml-1.crud-btn.d-flex.justify-content-center.align-items-center
+                      i.fas.fa-trash-alt
+              // Text
+              p.card-text.pb-2.pt-2.mb-2(style='border-bottom: 1px solid #cdcdcd')
+                | #{note.description}
+              div.d-flex.justify-content-end
+                small
+                    | #{note.date} at
+                    b   #{note.time}
+      .col-lg-2.col-md-2.col-sm-12
+  .add-btn-wrap.round-btn
+    a.btn.btn-bg-home.d-flex.justify-content-center.align-items-center.p-0.box-shadow(href='/~s1131670/P2_NodeJS_Opdracht/70/notes/create')
+      i.fas.fa-plus
+  // Customized modal
+  #modalDelete.modal.fade(tabindex='-1', role='dialog', aria-labelledby='ModalLabel', aria-hidden='true')
+    .modal-dialog.modal-notify.modal-danger(role='document', style='position: relative;top: 50px;')
+      // Content
+      .modal-content
+        // Header
+        .modal-header
+          p.heading.lead.text-center Are you sure you want to delete this note?
+          button.close(type='button', data-dismiss='modal', aria-label='Close')
+            span.white-text(aria-hidden='true') ×
+        .modal-body
+          .text-center
+            i.fas.fa-exclamation.fa-4x.animated.bounce(style='color:red;')
+        .modal-footer.justify-content-center
+          form#delete-form(method='post', action='/notes/details/delete')
+            button.btn.btn-danger(type='submit')
+              i.far.fa-trash-alt
+              | &nbsp; delete
+
+
+
+

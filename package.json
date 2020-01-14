@@ -1,0 +1,36 @@
+{
+  "name": "notes-app",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "serve": "nodemon ./bin/www",
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "async": "^2.6.1",
+    "body-parser": "*",
+    "cities.json": "^1.1.5",
+    "connect-flash": "*",
+    "cookie-parser": "~1.4.3",
+    "date-and-time": "^0.6.3",
+    "debug": "~2.6.9",
+    "express": "~4.16.0",
+    "express-messages": "*",
+    "express-session": "^1.15.6",
+    "express-validator": "*",
+    "fs": "*",
+    "http-errors": "~1.6.2",
+    "jade": "~1.11.0",
+    "lodash": "^4.17.11",
+    "mongodb": "*",
+    "mongoose": "^5.4.0",
+    "morgan": "~1.9.0",
+    "nodemon": "^1.18.9",
+    "passport": "*",
+    "passport-local": "*",
+    "request": "^2.88.0",
+    "sort-object": "^3.0.2",
+    "url": "^0.11.0",
+    "url-parse": "^1.4.4"
+  }
+}
